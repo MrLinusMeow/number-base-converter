@@ -31,7 +31,7 @@ char* convert(char* string, char baseIn, char baseOut){
 			fprintf(stderr, "\e[1;31m[ERROR]\e[0m Invalid character \'%c\'.\n\e[1;36m[HINT]\e[0m Valid characters are: 0-9, A-Z, a-z.", string[i]);
 		}
 		n *= baseIn;
-	}
+	} if(!valid) return "no output";
 	for(short j = 0;; ++j){
 		(char)r = counter % baseOut;
 		if(r < 10){
